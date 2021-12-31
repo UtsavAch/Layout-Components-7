@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple page layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=M+PLUS+1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343434;
+        line-height: 1;
+      }
+
+      .containar {
+        display: flex;
+      }
+
+      /* NAVIGATION */
+      .navigation {
+        background-color: chocolate;
+        padding: 0 20px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-items {
+        display: flex;
+        gap: 16px;
+        padding: 16px 0;
+      }
+
+      .nav-link:link,
+      .nav-link:visited {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        background-color: saddlebrown;
+        padding: 7px 12px;
+        border-radius: 7px;
+      }
+
+      .nav-link:hover,
+      .nav-link:visited {
+        background-color: sienna;
+      }
+
+      .trash {
+        color: #fff;
+        font-weight: 500;
+        background-color: saddlebrown;
+        padding: 7px 12px;
+        border-radius: 7px;
+      }
+
+      .trash:hover {
+        background-color: red;
+      }
+
+      /* CONTENT */
+      .content {
+        background-color: cornflowerblue;
+        height: 100vh;
+        display: flex;
+      }
+
+      .emails {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        align-items: center;
+        background-color: #e7e7e7;
+        padding: 25px;
+        gap: 25px;
+      }
+
+      .email-link {
+        text-decoration: none;
+        color: #000;
+        background-color: #aaa;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 36px 72px;
+      }
+
+      .email-view {
+        width: 55%;
+        background-color: #f7f7f7;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 25px;
+      }
+
+      .additional-info {
+        width: 20%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: #e7e7e7;
+        padding: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- NAVIGATION -->
+      <header class="navigation">
+        <div class="nav-items">
+          <a class="nav-link" href="#">New</a>
+          <a class="nav-link" href="#">Reply</a>
+          <a class="nav-link" href="#">Forward</a>
+          <a class="nav-link" href="#">Mark unread</a>
+        </div>
+        <span class="trash">Trash</span>
+      </header>
+
+      <div class="content">
+        <!-- EMAILS -->
+        <aside class="emails">
+          <a class="email-link" href="#">Email 1</a>
+          <a class="email-link" href="#">Email 2</a>
+          <a class="email-link" href="#">Email 3</a>
+          <a class="email-link" href="#">Email 4</a>
+          <a class="email-link" href="#">Email 5</a>
+          <a class="email-link" href="#">Email 6</a>
+        </aside>
+
+        <!-- EMAIL VIEW -->
+        <div class="email-view">
+          <p>Email view</p>
+        </div>
+
+        <!-- ADDITIONAL INFO -->
+        <div class="additional-info">
+          <p>Additional info</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
